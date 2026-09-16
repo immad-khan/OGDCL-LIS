@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OGDCL LIS - Login</title>
+  <title>OGDCL LIS - Admin Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +60,7 @@
 
       <!-- Top Branding Section -->
       <div class="relative z-10">
-        <a href="admin_login_screen.html" class="flex items-center gap-3.5 mb-10 block hover:opacity-90 transition-opacity">
+        <a href="login_screen.html" class="flex items-center gap-3.5 mb-10 block hover:opacity-90 transition-opacity" title="Back to User Login">
           <!-- OGDCL Styled Logo Icon -->
           <div class="w-12 h-12 rounded-xl bg-ogdcl-teal/20 border border-ogdcl-teal/30 flex items-center justify-center text-ogdcl-teal shadow-inner">
             <i class="fa-solid fa-scale-balanced text-2xl"></i>
@@ -148,14 +148,14 @@
         
         <!-- Header -->
         <div class="mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2">Sign In</h2>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2">Admin Login</h2>
           <p class="text-sm text-slate-500 font-normal">
             Enter your Legal Directorate credentials to access dockets and court schedules.
           </p>
         </div>
 
         <!-- Login Form -->
-        <form action="dashboard.html" onsubmit="event.preventDefault(); document.getElementById(\'loginStatusChip\').classList.remove(\'hidden\'); setTimeout(function(){ window.location.href=\'dashboard.html\'; }, 500);" onsubmit="event.preventDefault(); document.getElementById('loginStatusChip').classList.remove('hidden');" class="space-y-5">
+        <form action="admin_system_configuration.html" onsubmit="event.preventDefault(); document.getElementById(\'loginStatusChip\').classList.remove(\'hidden\'); setTimeout(function(){ window.location.href=\'dashboard.html\'; }, 500);" onsubmit="event.preventDefault(); document.getElementById('loginStatusChip').classList.remove('hidden');" class="space-y-5">
           
           <!-- Employee ID / Username -->
           <div>
@@ -170,7 +170,7 @@
                 type="text" 
                 id="username" 
                 name="username" 
-                value="OG-LEG-0492"
+                value="ADMIN-001"
                 placeholder="e.g., OG-LEG-1048 or t.mehmood" 
                 class="block w-full pl-10 pr-4 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
                 required
@@ -191,7 +191,7 @@
                 type="password" 
                 id="password" 
                 name="password" 
-                value="MockPassword2026!"
+                value="AdminSecret2026!"
                 placeholder="Enter your confidential password" 
                 class="block w-full pl-10 pr-11 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
                 required
