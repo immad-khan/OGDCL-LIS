@@ -316,19 +316,32 @@
 </div>
 <!-- Bottom Navigation Bar -->
 <div class="py-space-md px-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-between mt-space-sm mb-space-xl">
-<button class="px-space-md py-2.5 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1.5">
+<a href="register_new_case_step_4.html" class="px-space-md py-2.5 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1.5">
 <span class="material-symbols-outlined text-[18px]">arrow_back</span>
 <span class="">Previous: Case Attachments</span>
-</button>
+</a>
 <div class="flex items-center gap-space-sm">
 <button class="px-space-md py-2.5 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1.5">
 <span class="material-symbols-outlined text-[18px]">save</span>
 <span class="">Save as Draft</span>
 </button>
-<button class="px-space-xl py-2.5 bg-surface-container-high text-outline font-label-md text-label-md rounded-lg shadow-none cursor-not-allowed opacity-60 flex items-center gap-1.5 font-bold" disabled=""><span class="">Submit Case</span><span class="material-symbols-outlined text-[18px]">check_circle</span></button>
+<a href="case_details.html" id="submitCaseBtn" class="px-space-xl py-2.5 bg-primary hover:bg-on-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-sm flex items-center gap-1.5 font-bold transition-all"><span class="">Submit Case</span><span class="material-symbols-outlined text-[18px]">check_circle</span></a>
 </div>
 </div>
 </div>
-</div></main><footer class="w-full bg-surface-container-lowest py-space-sm px-space-lg shadow-[0_-1px_6px_rgba(11,28,48,0.03)] flex flex-col md:flex-row items-center justify-between gap-space-xs"><div class="font-caption text-caption text-on-surface-variant">© 2025 Oil &amp; Gas Development Company Limited (OGDCL) - Legal Information System. All Rights Reserved.</div><div class="font-caption text-caption text-tertiary flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-primary">lock</span><span class="">Confidential - Law &amp; Legal Services Directorate</span></div></footer></div>
+</div>
+<script>
+  const check = document.getElementById('confirmCheck');
+  const btn = document.getElementById('submitCaseBtn');
+  if (check && btn) {
+    check.addEventListener('change', function() {
+      if (this.checked) {
+        btn.classList.remove('opacity-50', 'pointer-events-none');
+      } else {
+        btn.classList.add('opacity-50', 'pointer-events-none');
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-sm px-space-lg shadow-[0_-1px_6px_rgba(11,28,48,0.03)] flex flex-col md:flex-row items-center justify-between gap-space-xs"><div class="font-caption text-caption text-on-surface-variant">© 2025 Oil &amp; Gas Development Company Limited (OGDCL) - Legal Information System. All Rights Reserved.</div><div class="font-caption text-caption text-tertiary flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-primary">lock</span><span class="">Confidential - Law &amp; Legal Services Directorate</span></div></footer></div>
 
 </body></html>
