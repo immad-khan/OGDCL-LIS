@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#00497a","on-tertiary-fixed":"#041d31","on-surface-variant":"#3d4a43","on-secondary-fixed":"#001d35","tertiary-fixed":"#cee5ff","on-primary-fixed":"#002115","on-tertiary-fixed-variant":"#33495e","surface-container":"#e5eeff","primary-fixed-dim":"#65dbae","error-container":"#ffdad6","on-secondary":"#ffffff","surface-variant":"#d3e4fe","on-secondary-container":"#005084","on-error":"#ffffff","outline":"#6d7a73","on-background":"#0b1c30","secondary":"#216298","surface":"#f8f9ff","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-bright":"#f8f9ff","surface-tint":"#006c4e","inverse-primary":"#65dbae","outline-variant":"#bccac1","inverse-surface":"#213145","on-tertiary-container":"#22384d","on-error-container":"#93000a","on-tertiary":"#ffffff","secondary-fixed-dim":"#9ccaff","secondary-container":"#8bc3ff","background":"#f8f9ff","on-primary-container":"#003f2c","on-surface":"#0b1c30","secondary-fixed":"#d0e4ff","primary":"#006c4e","inverse-on-surface":"#eaf1ff","surface-container-high":"#dce9ff","tertiary-fixed-dim":"#b2c9e3","tertiary":"#4b6077","primary-fixed":"#82f8c9","on-primary":"#ffffff","primary-container":"#36b388","on-primary-fixed-variant":"#00513a","surface-container-low":"#eff4ff","tertiary-container":"#8ca2ba","surface-dim":"#cbdbf5","surface-container-highest":"#d3e4fe"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-mobile":"0.75rem","space-md":"1rem","space-xl":"2.25rem","margin":"1.75rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"caption":["Inter"],"body-md":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"600"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">gavel</span></div><div><h1 class="font-headline-sm text-headline-sm tracking-tight text-surface-container-lowest leading-none">OGDCL</h1><span class="font-label-sm text-label-sm text-surface-container-highest uppercase tracking-wider block mt-1">Legal Info System</span></div></div><div class="mt-space-xs flex items-center justify-between bg-on-background/40 px-space-sm py-space-xs rounded-lg"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></span><span class="font-caption text-caption text-surface-container-high">On-Premise Isolated</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-variant/20 text-surface-container-highest">v3.4.2</span></div></div><div class="px-space-md py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest/60 px-space-sm">Legal Operations</span></div><nav class="px-space-md flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="advocate-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span class="font-body-md text-body-md">Advocate Management</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="case-management" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">Case Management</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="departmental-cases" href="#"><span class="material-symbols-outlined text-[20px]">corporate_fare</span><span class="font-body-md text-body-md">Departmental Cases</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="court-integration" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span class="font-body-md text-body-md">Court Integration</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="financial-tracking" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-body-md text-body-md">Financial Tracking</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="limitation-tracker" href="#"><span class="material-symbols-outlined text-[20px]">hourglass_bottom</span><span class="font-body-md text-body-md">Limitation Tracker</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="alerts-and-reminders" href="#"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-md text-body-md">Alerts &amp; Reminders</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 hover:text-surface-container-lowest transition-colors" data-path="reports-and-analytics" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Reports &amp; Analytics</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary-container font-semibold" data-path="data-import" href="#"><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-body-md text-body-md">Data Import (CSV)</span></a></nav></div><div class="p-space-md bg-on-background/30 flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-xs"><a class="font-caption text-caption text-surface-container-high hover:text-surface-container-lowest transition-colors flex items-center gap-1" data-path="system-help" href="#"><span class="material-symbols-outlined text-[14px]">help</span> Help Desk</a><a class="font-caption text-caption text-surface-container-high hover:text-surface-container-lowest transition-colors flex items-center gap-1" data-path="security-logs" href="#"><span class="material-symbols-outlined text-[14px]">shield</span> Audit Log</a></div><div class="flex items-center gap-space-sm bg-surface-variant/10 p-space-sm rounded-lg"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-surface-container-lowest truncate">Tariq Mehmood</span><span class="font-caption text-caption text-surface-container-highest truncate">ASC / General Manager (Legal)</span></div><button class="text-surface-container-high hover:text-surface-container-lowest"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-label-md text-label-md text-on-surface-variant">OGDCL HQ</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-label-md text-label-md text-primary font-semibold">Legal Affairs Division</span></div><div class="hidden xl:flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-secondary-container"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-caption text-caption">SECURE INTRANET ACTIVE</span></div></div><div class="flex items-center gap-space-md"><div class="relative w-72"><span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.02)]" placeholder="Search docket, advocate, citation..." type="text"/></div><div class="flex items-center gap-space-xs"><button class="h-10 px-3.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm"><span class="material-symbols-outlined text-[18px]">add</span><span>New Case</span></button><button class="h-10 px-3.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Cause List</span></button></div><div class="flex items-center gap-space-xs pl-space-xs"><button class="relative w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-lg py-space-md"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Utility Header -->
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-primary transition-colors cursor-pointer">Home</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Legal Case Dashboard</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">Data Import (CSV)</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mt-space-xs">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Import Historical Records from CSV</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+          Bulk-import legacy/historical records held in CSV or Excel files. Works fully offline; no internet connection is required.
+        </p>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Air-Gapped Node #ISB-04
+        </span>
+</div>
+</div>
+</div>
+<!-- Operational Guardrail Notice Banner -->
+<div class="mb-space-xl p-space-md rounded-xl bg-surface-container text-on-secondary-container shadow-sm flex items-start gap-space-md relative overflow-hidden">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-lg">
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span>Air-Gapped Ingestion Advisory</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary/10 text-primary font-bold uppercase tracking-wider">On-Premise Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        CSV import is intended for historical/legacy record entry only. Please download the template first, fill it in, and upload. Records with validation errors will be skipped unless corrected.
+      </p>
+</div>
+<div class="hidden lg:flex flex-col items-end shrink-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Max Batch Size</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">5,000 Records</span>
+</div>
+</div>
+<!-- SECTION 1: Data Type & Template Selection -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 1</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Select what you are importing</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Choose 1 of 5 record structures</span>
+</div>
+<!-- Selection Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- 1. Cases (Default Active) -->
+<div class="group cursor-pointer rounded-xl p-space-md bg-surface-container-lowest text-on-surface shadow-md hover:shadow-lg transition-all relative flex flex-col justify-between overflow-hidden" id="type-cases" onclick="selectType(this)">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary"></div>
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">folder_open</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cases</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1 leading-relaxed">
+            Primary case dockets, jurisdiction, court filings, and case numbers.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scope</span>
+<span class="font-label-sm text-label-sm text-primary font-bold font-mono">~1,550 active</span>
+</div>
+</div>
+<!-- 2. Advocates -->
+<div class="group cursor-pointer rounded-xl p-space-md bg-surface-container-low text-on-surface hover:bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between overflow-hidden opacity-90 hover:opacity-100" id="type-advocates" onclick="selectType(this)">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Advocates / Counsel</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1 leading-relaxed">
+            Empaneled legal counsels, chamber details, high court bar council IDs.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Directory</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold font-mono">~71 counsels</span>
+</div>
+</div>
+<!-- 3. Case Parties -->
+<div class="group cursor-pointer rounded-xl p-space-md bg-surface-container-low text-on-surface hover:bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between overflow-hidden opacity-90 hover:opacity-100" id="type-parties" onclick="selectType(this)">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-tertiary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Case Parties</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1 leading-relaxed">
+            Litigant parties, pro-forma respondents, SOE units, and representatives.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Registry</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold font-mono">~890 parties</span>
+</div>
+</div>
+<!-- 4. Financial Records -->
+<div class="group cursor-pointer rounded-xl p-space-md bg-surface-container-low text-on-surface hover:bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between overflow-hidden opacity-90 hover:opacity-100" id="type-financial" onclick="selectType(this)">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Financial Records</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1 leading-relaxed">
+            Contingent liabilities, claim amounts, bank guarantees, and decrees.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ledger</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold font-mono">~342 entries</span>
+</div>
+</div>
+<!-- 5. Case Diary / Hearing -->
+<div class="group cursor-pointer rounded-xl p-space-md bg-surface-container-low text-on-surface hover:bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between overflow-hidden opacity-90 hover:opacity-100" id="type-diary" onclick="selectType(this)">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-tertiary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">event_repeat</span>
+</div>
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Case Diary / Hearing</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1 leading-relaxed">
+            Hearing records, interim orders, bench notes, and next court dates.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chronology</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold font-mono">~2,840 notes</span>
+</div>
+</div>
+</div>
+<!-- Template Download Bar -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">description</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+          Selected schema: <strong class="text-on-surface font-semibold">Cases (Case Registration records v3.2)</strong>. Templates include all mandatory fields required for validation.
+        </span>
+</div>
+<button class="h-9 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-2 hover:bg-surface-container shadow-sm transition-colors shrink-0">
+<span class="material-symbols-outlined text-[18px] text-secondary">download</span>
+        Download CSV Template (Mock)
+      </button>
+</div>
+</section>
+<!-- SECTION 2: Upload Zone -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 2</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Upload your CSV file</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">RFC 4180 strict compliant</span>
+</div>
+<!-- Drag-and-drop Card Zone with dashed aesthetic without borders using layered background / shadow -->
+<div class="relative bg-surface-container-low/70 hover:bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col items-center justify-center text-center transition-all cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[36px]">cloud_upload</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Drag CSV file here, or click to browse</h3>
+<p class="font-caption text-caption text-on-surface-variant mt-1">
+        Accepted format: .csv (UTF-8 encoded). Max size: 25 MB per file.
+      </p>
+<!-- Active Loaded File Chip inside Container -->
+<div class="mt-space-lg w-full max-w-2xl bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center justify-between gap-space-md text-left">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">csv</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">OGDCL_Historical_Cases_2026.csv</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold shrink-0">
+                Ready for mapping
+              </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-caption text-caption mt-1">
+<span class="flex items-center gap-1 font-mono"><span class="material-symbols-outlined text-[14px]">storage</span> 842 KB</span>
+<span class="flex items-center gap-1 font-mono"><span class="material-symbols-outlined text-[14px]">table_rows</span> 42 rows detected</span>
+<span class="flex items-center gap-1 text-primary font-semibold"><span class="material-symbols-outlined text-[14px]">task_alt</span> Local UTF-8 validated</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Inspect Raw Stream">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center hover:opacity-90 transition-opacity" title="Remove file">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Column Mapping & Preview -->
+<section class="flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 3</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Map CSV columns to LIS fields</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+          Auto-mapped columns: 8 of 9
+        </span>
+</div>
+</div>
+<!-- Split Pane Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT SIDE: Column Mapping Table (7 Cols on desktop) -->
+<div class="xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">sync_alt</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Field Alignment Engine</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Review before proceeding to database injection</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container/60 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4">CSV Source Column</th>
+<th class="py-3 px-4">Mapped LIS Target Field</th>
+<th class="py-3 px-3 text-center">Constraint</th>
+<th class="py-3 px-4 text-right">Mapping Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Sr. No (Ignored) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Sr.No.</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container text-on-surface-variant font-body-sm text-body-sm outline-none">
+<option selected="">(Ignore this column)</option>
+<option>Case Number</option>
+<option>Cause Title</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="text-outline text-[12px] font-mono">—</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">block</span> Ignored
+                  </span>
+</td>
+</tr>
+<!-- Row 2: Case No -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Case No</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none font-semibold">
+<option>Case Number (docket_number)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Required</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 3: Case Title -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Case Title</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none font-semibold">
+<option>Cause Title (case_title)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Required</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 4: Case Type -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Case Type</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none font-semibold">
+<option>Case Type (jurisdiction_type)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Required</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 5: Nature -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Nature</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none font-semibold">
+<option>Nature / Type of Case (matter_category)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Required</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 6: Court -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Court</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none font-semibold">
+<option>Court / Forum (judicial_forum_id)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Required</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 7: Next Hearing -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Next Hearing</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none">
+<option>Next Hearing Date (hearing_date)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Optional</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+<!-- Row 8: Amount -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Amount</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none">
+<option>Amount Involved PKR (claim_amount)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Optional</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span> Auto-detected
+                  </span>
+</td>
+</tr>
+<!-- Row 9: Status -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface">Status</td>
+<td class="py-3 px-4">
+<select class="w-full h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none">
+<option>Current Status (status_token)</option>
+</select>
+</td>
+<td class="py-3 px-3 text-center">
+<span class="text-on-surface-variant font-label-sm text-label-sm">Optional</span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Matched
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- RIGHT SIDE: Validation Preview Card (5 Cols on desktop) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Live Preview Matrix -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">preview</span>
+              Preview (First 5 rows)
+            </h3>
+<span class="font-mono text-caption text-caption text-on-surface-variant">Showing 1-5 of 42</span>
+</div>
+<!-- Micro Table Preview -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left text-[11px] font-mono leading-tight">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant uppercase font-semibold">
+<th class="p-2">Case No</th>
+<th class="p-2">Title</th>
+<th class="p-2">Nature</th>
+<th class="p-2">Court</th>
+<th class="p-2">Next Hearing</th>
+<th class="p-2">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-2 font-bold text-secondary">CP-1049/23</td>
+<td class="p-2 truncate max-w-[120px]">OGDCL vs Federation</td>
+<td class="p-2">Concession</td>
+<td class="p-2">IHC Islamabad</td>
+<td class="p-2">18-Oct-2026</td>
+<td class="p-2"><span class="px-1 py-0.5 rounded bg-primary/10 text-primary">Active</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-2 font-bold text-secondary">WP-8821/24</td>
+<td class="p-2 truncate max-w-[120px]">M/s Zaver vs OGDCL</td>
+<td class="p-2">Arbitration</td>
+<td class="p-2">SHC Karachi</td>
+<td class="p-2">24-Sep-2026</td>
+<td class="p-2"><span class="px-1 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant">Arguments</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-2 font-bold text-secondary">ICA-302/25</td>
+<td class="p-2 truncate max-w-[120px]">Syed Abbas vs OGDCL</td>
+<td class="p-2">Service Matter</td>
+<td class="p-2">LHC Lahore</td>
+<td class="p-2">04-Oct-2026</td>
+<td class="p-2"><span class="px-1 py-0.5 rounded bg-primary/10 text-primary">Stay Granted</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-2 font-bold text-secondary">CPLA-92/26</td>
+<td class="p-2 truncate max-w-[120px]">OGDCL vs FBR</td>
+<td class="p-2">Tax Dispute</td>
+<td class="p-2">Supreme Court</td>
+<td class="p-2">12-Nov-2026</td>
+<td class="p-2"><span class="px-1 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant">Pending</span></td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors bg-error-container/20">
+<td class="p-2 font-bold text-error">NULL [Row 7]</td>
+<td class="p-2 truncate max-w-[120px]">Labor Union vs Management</td>
+<td class="p-2">Labor / NIRC</td>
+<td class="p-2">NIRC Islamabad</td>
+<td class="p-2">08-Oct-2026</td>
+<td class="p-2"><span class="px-1 py-0.5 rounded bg-error-container text-error">Malformed</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Summary Metric Strip -->
+<div class="grid grid-cols-4 gap-2 mt-2 p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Rows</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold font-mono">42</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Valid Rows</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold font-mono">38</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-error">Errors</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold font-mono">4</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-container">Duplicates</span>
+<span class="font-headline-sm text-headline-sm text-on-secondary-container font-bold font-mono">1</span>
+</div>
+</div>
+<!-- Error Inspection List -->
+<div class="flex flex-col gap-2 mt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Validation Exceptions (4 detected)</span>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm">
+<div class="p-2 bg-surface-container-low rounded-lg shadow-sm flex items-start gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<span class="font-mono text-error font-bold text-caption text-caption shrink-0">Row 07:</span>
+<span class="text-on-surface text-caption text-caption">Case No missing — required field docket identifier cannot be empty.</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg shadow-sm flex items-start gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<span class="font-mono text-error font-bold text-caption text-caption shrink-0">Row 12:</span>
+<span class="text-on-surface text-caption text-caption">Invalid date format in Next Hearing ("2026/10/14" instead of expected DD-MMM-YYYY).</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg shadow-sm flex items-start gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-on-secondary-container"></div>
+<span class="font-mono text-on-secondary-container font-bold text-caption text-caption shrink-0">Row 19:</span>
+<span class="text-on-surface text-caption text-caption">Duplicate: CP-4303/2026 already exists in isolated LIS master registry.</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg shadow-sm flex items-start gap-2 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<span class="font-mono text-secondary font-bold text-caption text-caption shrink-0">Row 34:</span>
+<span class="text-on-surface text-caption text-caption">Nature value 'Tax dispute' does not match taxonomy; auto-mapped to 'FBR/Tax/Subsidy Matters'.</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="mt-space-sm pt-space-sm border-t border-surface-container flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<button class="flex-1 h-10 px-4 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container shadow-md transition-all font-semibold">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+                Import Valid Records (38)
+              </button>
+<button class="h-10 px-4 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-sm font-semibold shrink-0">
+                Skip Invalid &amp; Continue
+              </button>
+</div>
+<div class="flex items-center justify-between px-1">
+<a class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> Fix and Re-upload
+              </a>
+<a class="font-label-sm text-label-sm text-error hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">download</span> Export Error Log (.CSV)
+              </a>
+</div>
+<p class="font-caption text-caption text-on-surface-variant text-center mt-1 leading-snug">
+              Invalid rows will not be imported. A downloadable error report is generated for correction and re-upload (Mock).
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Recent Import Activity (Audit Ledger) -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Audit Ledger</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Recent Import Activity</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter Ledger
+        </button>
+<button class="h-8 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center gap-1 hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">print</span> Export Audit Log
+        </button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container/60 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4">Date &amp; Time</th>
+<th class="py-3 px-4">File Name</th>
+<th class="py-3 px-4">Data Type</th>
+<th class="py-3 px-3 text-center">Total</th>
+<th class="py-3 px-3 text-center">Imported</th>
+<th class="py-3 px-3 text-center">Failed</th>
+<th class="py-3 px-4">Performed By</th>
+<th class="py-3 px-3 text-center">Status</th>
+<th class="py-3 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-mono text-on-surface-variant">06-Sep-2026 10:15</td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+                OGDCL_Historical_Cases_2026.csv
+              </td>
+<td class="py-3.5 px-4 text-on-surface-variant">Cases</td>
+<td class="py-3.5 px-3 text-center font-mono font-bold">42</td>
+<td class="py-3.5 px-3 text-center font-mono text-primary font-bold">38</td>
+<td class="py-3.5 px-3 text-center font-mono text-error font-bold">4</td>
+<td class="py-3.5 px-4 text-on-surface">Tariq Mehmood, ASC</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                  Partial Success
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors font-semibold flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Log
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-mono text-on-surface-variant">05-Sep-2026 16:22</td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+                Advocates_Master_List.csv
+              </td>
+<td class="py-3.5 px-4 text-on-surface-variant">Advocates</td>
+<td class="py-3.5 px-3 text-center font-mono font-bold">71</td>
+<td class="py-3.5 px-3 text-center font-mono text-primary font-bold">71</td>
+<td class="py-3.5 px-3 text-center font-mono text-on-surface-variant">0</td>
+<td class="py-3.5 px-4 text-on-surface">Farooq Azam (MIS)</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+                  Success
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors font-semibold flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Log
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-mono text-on-surface-variant">04-Sep-2026 11:08</td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+                Financial_Records_2024-25.csv
+              </td>
+<td class="py-3.5 px-4 text-on-surface-variant">Financial Records</td>
+<td class="py-3.5 px-3 text-center font-mono font-bold">156</td>
+<td class="py-3.5 px-3 text-center font-mono text-primary font-bold">148</td>
+<td class="py-3.5 px-3 text-center font-mono text-error font-bold">8</td>
+<td class="py-3.5 px-4 text-on-surface">Farooq Azam (MIS)</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                  Partial Success
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors font-semibold flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Log
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-mono text-on-surface-variant">02-Sep-2026 09:44</td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+                Case_Parties_Batch1.csv
+              </td>
+<td class="py-3.5 px-4 text-on-surface-variant">Case Parties</td>
+<td class="py-3.5 px-3 text-center font-mono font-bold">220</td>
+<td class="py-3.5 px-3 text-center font-mono text-primary font-bold">220</td>
+<td class="py-3.5 px-3 text-center font-mono text-on-surface-variant">0</td>
+<td class="py-3.5 px-4 text-on-surface">Tariq Mehmood, ASC</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+                  Success
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors font-semibold flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Log
+                </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-3.5 px-4 font-mono text-on-surface-variant">01-Sep-2026 15:37</td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">attachment</span>
+                Case_Diary_History_Q1.csv
+              </td>
+<td class="py-3.5 px-4 text-on-surface-variant">Case Diary</td>
+<td class="py-3.5 px-3 text-center font-mono font-bold">88</td>
+<td class="py-3.5 px-3 text-center font-mono text-primary font-bold">84</td>
+<td class="py-3.5 px-3 text-center font-mono text-error font-bold">4</td>
+<td class="py-3.5 px-4 text-on-surface">Farooq Azam (MIS)</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                  Partial Success
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors font-semibold flex items-center gap-1 ml-auto">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Log
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Note & Security Clearance -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm border-t border-surface-container">
+<div class="flex items-center gap-2 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+          Import actions are restricted to Admin role within the isolated deployment. Every import is recorded in the local audit trail (Mock).
+        </div>
+<span class="font-mono text-caption text-caption text-on-surface-variant font-bold">SHA-256 Checksums Logged</span>
+</div>
+</div>
+</section>
+<!-- Interactive script for Step 1 Card Selection -->
+<script>
+    function selectType(selectedCard) {
+      const cards = [
+        document.getElementById('type-cases'),
+        document.getElementById('type-advocates'),
+        document.getElementById('type-parties'),
+        document.getElementById('type-financial'),
+        document.getElementById('type-diary')
+      ];
+
+      cards.forEach(card => {
+        if (!card) return;
+        const topBar = card.querySelector('.absolute.top-0');
+        const checkIcon = card.querySelector('.rounded-full span.material-symbols-outlined');
+        const checkContainer = card.querySelector('.rounded-full');
+
+        if (card === selectedCard) {
+          card.classList.remove('bg-surface-container-low', 'opacity-90');
+          card.classList.add('bg-surface-container-lowest', 'shadow-md');
+          if (!topBar) {
+            const bar = document.createElement('div');
+            bar.className = 'absolute top-0 left-0 right-0 h-1.5 bg-primary';
+            card.prepend(bar);
+          }
+          if (checkContainer) {
+            checkContainer.classList.remove('bg-surface-container-highest', 'text-transparent');
+            checkContainer.classList.add('bg-primary', 'text-on-primary');
+          }
+        } else {
+          card.classList.remove('bg-surface-container-lowest', 'shadow-md');
+          card.classList.add('bg-surface-container-low', 'opacity-90');
+          if (topBar) topBar.remove();
+          if (checkContainer) {
+            checkContainer.classList.add('bg-surface-container-highest', 'text-transparent');
+            checkContainer.classList.remove('bg-primary', 'text-on-primary');
+          }
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

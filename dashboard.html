@@ -1,0 +1,924 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OGDCL LIS - Activity &amp; Upload Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8f9ff;
+      color: #1e293b;
+    }
+    .text-ogdcl {
+      color: #36b388;
+    }
+    .bg-ogdcl {
+      background-color: #36b388;
+    }
+    .border-ogdcl {
+      border-color: #36b388;
+    }
+    .sidebar-bg {
+      background-color: #0f172a;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+  <div class="flex flex-1 min-h-screen">
+    
+    <!-- LEFT SIDEBAR: Admin Group Only (per User Accounts screen precedent) -->
+    <aside class="w-64 sidebar-bg text-slate-300 flex flex-col justify-between shrink-0 border-r border-slate-800">
+      <div>
+        <!-- Brand Logo & System Name -->
+        <div class="p-5 border-b border-slate-800 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-bold text-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-white font-bold text-base leading-tight tracking-wide">OGDCL</h1>
+            <p class="text-[11px] text-slate-400 font-medium">LEGAL INFORMATION SYSTEM</p>
+          </div>
+        </div>
+
+        <!-- System Status Badges -->
+        <div class="px-5 py-3 border-b border-slate-800/80 bg-slate-900/40 flex items-center justify-between text-xs">
+          <span class="inline-flex items-center gap-1.5 text-slate-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Isolated On-Premise
+          </span>
+          <span class="text-slate-500 text-[10px] font-mono">v3.4.2</span>
+        </div>
+
+        <!-- Navigation Links: Admin Group with 2 items -->
+        <div class="p-4">
+          <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2 flex items-center justify-between">
+            <span class="">Admin</span>
+            <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+
+          <nav class="space-y-1"><!-- Add New User Modal -->
+<a href="#" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors text-sm font-medium">
+  <div class="flex items-center gap-3">
+    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+    </svg>
+    <span class="">Add New User Modal</span>
+  </div>
+</a>
+
+<!-- Manage User Modal -->
+<a href="#" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors text-sm font-medium">
+  <div class="flex items-center gap-3">
+    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+    </svg>
+    <span class="">Manage User Modal</span>
+  </div>
+</a>
+
+<!-- Activity & Upload Audit (ACTIVE) -->
+<a href="#" class="flex items-center justify-between px-3 py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-sm shadow-sm shadow-emerald-900/30">
+  <div class="flex items-center gap-3">
+    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    </svg>
+    <span class="">Activity &amp; Upload Audit</span>
+  </div>
+  <span class="w-2 h-2 rounded-full bg-white"></span>
+</a>
+
+<!-- System Config -->
+<a href="#" class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors text-sm font-medium">
+  <div class="flex items-center gap-3">
+    <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    </svg>
+    <span class="">System Config</span>
+  </div>
+</a></nav>
+        </div>
+      </div>
+
+      <!-- User Profile Card & Footer -->
+      <div class="p-4 border-t border-slate-800 bg-slate-900/30">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-slate-300 text-xs">
+            FA
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-semibold text-white truncate">Farooq Azam Chaudhry</p>
+            <p class="text-[11px] text-slate-400 truncate">Sys Admin (MIS) • Privileged</p>
+          </div>
+        </div>
+        <div class="mt-3 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Legal Directorate
+          </span>
+          <span class="text-emerald-400 font-mono">Secure LIS</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 flex flex-col min-w-0 bg-[#f8f9ff]">
+      
+      <!-- TOP HEADER BAR -->
+      <header class="bg-white border-b border-slate-200 sticky top-0 z-20 px-8 py-3.5 flex items-center justify-between shadow-xs">
+        <div class="flex flex-col">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-xs font-medium text-slate-500">
+            <a href="#" class="hover:text-slate-800 transition-colors">Home</a>
+            <span class="text-slate-400">/</span>
+            <a href="#" class="hover:text-slate-800 transition-colors">Admin</a>
+            <span class="text-slate-400">/</span>
+            <span class="text-slate-800 font-semibold">Activity &amp; Upload Audit</span>
+          </nav>
+          <div class="flex items-center gap-2 mt-0.5">
+            <span class="text-[11px] text-slate-400 flex items-center gap-1">
+              <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Islamabad (PKT) | Monday, 08 Sep 2026
+            </span>
+          </div>
+        </div>
+
+        <!-- Global Search & Actions Header -->
+        <div class="flex items-center gap-4">
+          <div class="relative w-80">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </span>
+            <input type="text" placeholder="Search case number, title, court, counsel..." class="w-full pl-9 pr-4 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400">
+          </div>
+
+          <div class="flex items-center gap-2 pl-2 border-l border-slate-200">
+            <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-amber-50 text-amber-700 border border-amber-200 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              Admin View-Only Access
+            </span>
+            <button class="p-1.5 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors relative" title="System Alerts">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+              </svg>
+              <span class="absolute top-1 right-1 w-2 h-2 bg-emerald-500 rounded-full ring-2 ring-white"></span>
+            </button>
+            <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-slate-700 text-xs">
+              FA
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- BODY WRAPPER -->
+      <div class="p-8 max-w-7xl mx-auto w-full space-y-6 flex-1">
+        
+        <!-- PAGE HEADING & SUBTITLE -->
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-3">
+              <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Activity &amp; Upload Audit</h1>
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Audit Trail Mode (Mock)
+              </span>
+            </div>
+            <p class="text-sm text-slate-600 mt-1 max-w-3xl">
+              View-only record of data entries and uploads performed by LIS users. All activity is stored locally in the audit trail (Mock).
+            </p>
+          </div>
+
+          <!-- Secondary Quick Actions (Export / Print Logs) -->
+          <div class="flex items-center gap-2 shrink-0">
+            <button class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors shadow-xs">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Export Audit Log (CSV)
+            </button>
+            <button class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors shadow-xs">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+              </svg>
+              Print Audit Register
+            </button>
+          </div>
+        </div>
+
+        <!-- TOP 4 KPI CARDS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card 1: Uploads This Month -->
+          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
+            <div>
+              <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Uploads This Month</p>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">412</h3>
+              <p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
+                <span class="text-emerald-600 font-semibold">+18%</span> vs previous month
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 2: Active Uploaders -->
+          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
+            <div>
+              <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Active Uploaders</p>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">6</h3>
+              <p class="text-[11px] text-slate-500 mt-1">
+                Legal Officers &amp; Directorate team
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 3: CSV Imports -->
+          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
+            <div>
+              <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">CSV Imports</p>
+              <h3 class="text-2xl font-bold text-slate-900 mt-1">5</h3>
+              <p class="text-[11px] text-slate-500 mt-1">
+                Batch dockets &amp; financial batches
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 4: Failed/Rejected Entries -->
+          <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-xs flex items-center justify-between">
+            <div>
+              <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Failed/Rejected Entries</p>
+              <h3 class="text-2xl font-bold text-rose-600 mt-1">12</h3>
+              <p class="text-[11px] text-slate-500 mt-1">
+                Format errors &amp; missing mandatory fields
+              </p>
+            </div>
+            <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTER BAR SECTION -->
+        <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-xs space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+              </svg>
+              <h2 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Filter Audit Trail</h2>
+            </div>
+            <span class="text-[11px] text-slate-400">Showing all indexed local logs</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3.5">
+            <!-- Filter 1: User Dropdown -->
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 mb-1">User</label>
+              <select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
+                <option value="all">All Users (Legal Users + Admin)</option>
+                <option value="tariq">Tariq Mehmood, ASC (CLO / GM Legal)</option>
+                <option value="mansoor">Mansoor Ahmed Khan (Senior Legal Exec)</option>
+                <option value="farooq">Farooq Azam Chaudhry (Admin - MIS)</option>
+                <option value="hassan">Hassan Meerza (Lead Litigation Counsel)</option>
+                <option value="arif">Arif Latif (Legal Officer)</option>
+                <option value="bushra">Bushra Jamil (Legal Associate)</option>
+                <option value="usman">Usman Arif (Manager Arb &amp; JV)</option>
+              </select>
+            </div>
+
+            <!-- Filter 2: Module Dropdown -->
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 mb-1">Module</label>
+              <select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
+                <option value="all">All Modules</option>
+                <option value="cases">Cases</option>
+                <option value="diary">Diary</option>
+                <option value="attachments">Attachments</option>
+                <option value="financial">Financial Records</option>
+                <option value="advocates">Advocates</option>
+                <option value="csv">CSV Import</option>
+                <option value="users">User Management</option>
+              </select>
+            </div>
+
+            <!-- Filter 3: Date From / To -->
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 mb-1">Date From</label>
+              <input type="date" value="2026-09-01" class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 mb-1">Date To</label>
+              <input type="date" value="2026-09-08" class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
+            </div>
+
+            <!-- Filter 4: Search Text -->
+            <div>
+              <label class="block text-[11px] font-semibold text-slate-600 mb-1">Search Keywords</label>
+              <input type="text" placeholder="File name, case no, record ID..." class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 placeholder-slate-400">
+            </div>
+          </div>
+
+          <!-- Filter Action Buttons -->
+          <div class="flex items-center justify-end gap-2.5 pt-2">
+            <button class="px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors border border-transparent">
+              Clear
+            </button>
+            <button class="px-4 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors shadow-xs flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+              </svg>
+              Apply Filter
+            </button>
+          </div>
+        </div>
+
+        <!-- MAIN TABLE: Data Entry & Upload Activity -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+          
+          <!-- Table Header / Title Row -->
+          <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 bg-white">
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="text-base font-bold text-slate-900">Data Entry &amp; Upload Activity</h2>
+                <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">Showing 8 entries</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5">Chronological ledger of user entries across all LIS operational modules</p>
+            </div>
+
+            <!-- View-only indicator -->
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                Administrator View Only • Modifications Disabled
+              </span>
+            </div>
+          </div>
+
+          <!-- Table Content -->
+          <div class="overflow-x-auto custom-scroll">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-50/90 text-slate-600 font-semibold border-b border-slate-200 uppercase tracking-wider text-[11px]">
+                  <th class="py-3.5 px-4">Timestamp</th>
+                  <th class="py-3.5 px-4">User</th>
+                  <th class="py-3.5 px-3">Role</th>
+                  <th class="py-3.5 px-3">Module</th>
+                  <th class="py-3.5 px-3">Action</th>
+                  <th class="py-3.5 px-4">Record / File Reference</th>
+                  <th class="py-3.5 px-2 text-center">Count</th>
+                  <th class="py-3.5 px-3">Outcome</th>
+                  <th class="py-3.5 px-4">Details</th>
+                  <th class="py-3.5 px-4 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                
+                <!-- Row 1: Tariq Mehmood (CSV Import - Partial Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    08-Sep-2026 <span class="text-slate-400 text-[11px]">09:44</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[10px] flex items-center justify-center">TM</div>
+                      <div>
+                        <span class="">Tariq Mehmood, ASC</span>
+                        <div class="text-[10px] text-slate-400 font-normal">CLO / GM Legal</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200/60">CSV Import</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Imported
+                  </td>
+                  <td class="py-3.5 px-4 font-mono text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <svg class="w-3.5 h-3.5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                      <span class="truncate max-w-[210px]" title="OGDCL_Historical_Cases_2026.csv">OGDCL_Historical_Cases_2026.csv</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">38</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <!-- Amber chip for Partial Success -->
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Partial Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-amber-700 font-medium">
+                    4 rows rejected (missing court bench codes)
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 2: Mansoor Ahmed Khan (Case Diary - Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    08-Sep-2026 <span class="text-slate-400 text-[11px]">09:12</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 font-bold text-[10px] flex items-center justify-center">MK</div>
+                      <div>
+                        <span class="">Mansoor Ahmed Khan</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Senior Legal Executive</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Case Diary</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Entry Added
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-semibold text-slate-900">CP-4303/2026</span>
+                      <span class="text-slate-400">— Hearing 06-Sep</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <!-- Green chip for Success -->
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-400">
+                    —
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 3: Farooq Azam (MIS) (User Management - Executed) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    07-Sep-2026 <span class="text-slate-400 text-[11px]">16:44</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold text-[10px] flex items-center justify-center">FA</div>
+                      <div>
+                        <span class="">Farooq Azam (MIS)</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Sys Admin (MIS)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Admin</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200/60">User Management</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Password Reset
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-800 font-mono">
+                    OG-LEG-0621 <span class="text-slate-400 font-sans text-[11px]">(Iftikhar Fatima)</span>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <!-- Blue chip for Executed -->
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                      Executed
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-400">
+                    —
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 4: Hassan Meerza (Financial Records - Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    07-Sep-2026 <span class="text-slate-400 text-[11px]">15:30</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-[10px] flex items-center justify-center">HM</div>
+                      <div>
+                        <span class="">Hassan Meerza</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Lead Litigation Counsel</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">Financial Records</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Record Added
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <span class="px-1.5 py-0.5 rounded bg-slate-100 text-[10px] font-bold text-slate-700">GIDC</span>
+                      <span class="font-medium text-slate-900">CP-4620/2023</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-600">
+                    Monthly update
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 5: Arif Latif (Attachments - Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    07-Sep-2026 <span class="text-slate-400 text-[11px]">14:02</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 font-bold text-[10px] flex items-center justify-center">AL</div>
+                      <div>
+                        <span class="">Arif Latif</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Legal Officer (Tribunals)</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/60">Attachments</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    File Uploaded
+                  </td>
+                  <td class="py-3.5 px-4 font-mono text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <svg class="w-3.5 h-3.5 text-rose-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                      </svg>
+                      <span class="truncate max-w-[210px]" title="Interim-Order-22Aug2026.pdf">Interim-Order-22Aug2026.pdf</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-600">
+                    Court Orders category
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 6: Tariq Mehmood, ASC (CSV Import - Partial Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    06-Sep-2026 <span class="text-slate-400 text-[11px]">11:15</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold text-[10px] flex items-center justify-center">TM</div>
+                      <div>
+                        <span class="">Tariq Mehmood, ASC</span>
+                        <div class="text-[10px] text-slate-400 font-normal">CLO / GM Legal</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200/60">CSV Import</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Imported
+                  </td>
+                  <td class="py-3.5 px-4 font-mono text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <svg class="w-3.5 h-3.5 text-purple-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                      <span class="truncate max-w-[210px]" title="Financial_Records_2024-25.csv">Financial_Records_2024-25.csv</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">148</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Partial Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-amber-700 font-medium">
+                    8 rows rejected (invalid currency token)
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 7: Bushra Jamil (Cases - Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    06-Sep-2026 <span class="text-slate-400 text-[11px]">10:32</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-teal-100 text-teal-700 font-bold text-[10px] flex items-center justify-center">BJ</div>
+                      <div>
+                        <span class="">Bushra Jamil</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Legal Associate</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded border border-cyan-200/60">Cases</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Case Registered
+                  </td>
+                  <td class="py-3.5 px-4 text-xs font-semibold text-slate-900 font-mono">
+                    WP-1049/2025
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-400">
+                    —
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 8: Mansoor Ahmed Khan (Case Diary - Success) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    05-Sep-2026 <span class="text-slate-400 text-[11px]">17:50</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-700 font-bold text-[10px] flex items-center justify-center">MK</div>
+                      <div>
+                        <span class="">Mansoor Ahmed Khan</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Senior Legal Executive</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-slate-700 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Case Diary</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Entry Updated
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-800">
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-semibold text-slate-900">WP-1049/2025</span>
+                      <span class="text-slate-500">— Next Hearing update</span>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                      Success
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-400">
+                    —
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Supplementary Row 9 (Rejected example for status coverage): Usman Arif (Advocates - Rejected / Failed) -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4 font-mono text-slate-500 whitespace-nowrap">
+                    04-Sep-2026 <span class="text-slate-400 text-[11px]">15:20</span>
+                  </td>
+                  <td class="py-3.5 px-4 font-medium text-slate-900">
+                    <div class="flex items-center gap-2">
+                      <div class="w-6 h-6 rounded-full bg-rose-100 text-rose-700 font-bold text-[10px] flex items-center justify-center">UA</div>
+                      <div>
+                        <span class="">Usman Arif</span>
+                        <div class="text-[10px] text-slate-400 font-normal">Manager Arb &amp; JV</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700 border border-slate-200">Legal User</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <span class="font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60">Advocates</span>
+                  </td>
+                  <td class="py-3.5 px-3 whitespace-nowrap font-medium text-slate-800">
+                    Profile Create
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-slate-800">
+                    Advocate CNIC Verification Fail
+                  </td>
+                  <td class="py-3.5 px-2 text-center font-bold text-slate-800">1</td>
+                  <td class="py-3.5 px-3 whitespace-nowrap">
+                    <!-- Red chip for Rejected / Failed -->
+                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                      Rejected / Failed
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-xs text-rose-600 font-medium">
+                    Duplicate CNIC entry in local store
+                  </td>
+                  <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                    <button class="px-2.5 py-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded border border-emerald-200 transition-colors">
+                      View Details
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Table Footer Pagination & Ledger Summary -->
+          <div class="p-4 bg-slate-50/70 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div class="">
+              Showing <span class="font-semibold text-slate-800">1 to 9</span> of <span class="font-semibold text-slate-800">412</span> indexed audit events
+            </div>
+            <div class="flex items-center gap-1">
+              <button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-400 cursor-not-allowed">Previous</button>
+              <button class="px-2.5 py-1 rounded border border-emerald-500 bg-emerald-600 text-white font-semibold">1</button>
+              <button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100">2</button>
+              <button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100">3</button>
+              <span class="px-1 text-slate-400">...</span>
+              <button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100">46</button>
+              <button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-700 hover:bg-slate-100">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCK AUDIT DETAIL MODAL / DRAWER PREVIEW (STATIC VIEW FOR INSPECTION) -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">Audit Inspection Panel Preview (Read-Only)</h3>
+            </div>
+            <span class="text-[11px] font-medium text-slate-400">Viewing Record: AUD-2026-0908-001</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-50/70 p-4 rounded-lg border border-slate-200/80 text-xs">
+            <div>
+              <p class="text-[11px] text-slate-500 font-semibold">User &amp; Origin</p>
+              <p class="font-bold text-slate-900 mt-0.5">Tariq Mehmood, ASC (CLO / GM Legal)</p>
+              <p class="text-slate-500 text-[11px] font-mono mt-0.5">Local Terminal: 10.7.7.42 • Law Directorate</p>
+            </div>
+            <div>
+              <p class="text-[11px] text-slate-500 font-semibold">Target File &amp; Batch Size</p>
+              <p class="font-bold text-slate-900 mt-0.5">OGDCL_Historical_Cases_2026.csv</p>
+              <p class="text-slate-500 text-[11px] mt-0.5">38 total rows • 34 validated • 4 rejected</p>
+            </div>
+            <div>
+              <p class="text-[11px] text-slate-500 font-semibold">Audit Status &amp; Administrative Action</p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                  Partial Success
+                </span>
+                <span class="text-slate-500 text-[11px]">View-Only • No Edit Allowed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER NOTE: EXACT MANDATORY SPECIFICATION -->
+        <div class="bg-amber-50/70 border border-amber-200/80 rounded-xl p-4 flex items-start gap-3 text-amber-900 shadow-2xs">
+          <div class="p-1 rounded-md bg-amber-100 text-amber-700 shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-xs">
+            <p class="font-bold text-amber-950">Administrative Audit Disclaimer</p>
+            <p class="text-amber-900 mt-0.5 leading-relaxed">
+              Admin access on this screen is view-only. Data entries cannot be modified from here. Corrections are performed by the Legal User who originally entered the record.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOOTER COPYRIGHT & CONFIDENTIALITY -->
+      <footer class="bg-white border-t border-slate-200 px-8 py-3.5 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2 mt-auto">
+        <div class="">
+          © 2026 Oil &amp; Gas Development Company Limited (OGDCL) - Legal Information System. All Rights Reserved.
+        </div>
+        <div class="flex items-center gap-3 text-slate-400 text-[11px]">
+          <span class="flex items-center gap-1 text-slate-500">
+            <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            Confidential • Law &amp; Legal Services Directorate (Intranet Mock)
+          </span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+
+
+</body></html>

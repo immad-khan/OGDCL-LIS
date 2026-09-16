@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OGDCL LIS - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            ogdcl: {
+              teal: '#36b388',
+              tealHover: '#2ea179',
+              navy: '#0b192c',
+              navyDark: '#071220',
+              navyLight: '#11223b',
+              navyBorder: '#1c3456',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <div class="min-h-screen w-full flex flex-col lg:flex-row">
+    
+    <!-- LEFT PANEL: Branding Side (Deep Navy) -->
+    <div class="lg:w-5/12 xl:w-5/12 bg-ogdcl-navy flex flex-col justify-between p-8 sm:p-12 lg:p-16 text-white relative overflow-hidden border-r border-slate-200 lg:border-none">
+      
+      <!-- Subtle Decorative Background Pattern & Glows -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <pattern id="grid-pattern" width="48" height="48" patternUnits="userSpaceOnUse">
+              <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#36b388" stroke-width="0.75"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+        </svg>
+      </div>
+
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-ogdcl-teal/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Top Branding Section -->
+      <div class="relative z-10">
+        <div class="flex items-center gap-3.5 mb-10">
+          <!-- OGDCL Styled Logo Icon -->
+          <div class="w-12 h-12 rounded-xl bg-ogdcl-teal/20 border border-ogdcl-teal/30 flex items-center justify-center text-ogdcl-teal shadow-inner">
+            <i class="fa-solid fa-scale-balanced text-2xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-extrabold tracking-wider text-white">OGDCL</span>
+              <span class="text-[10px] px-2 py-0.5 font-bold tracking-widest uppercase bg-ogdcl-teal/20 text-emerald-300 border border-ogdcl-teal/40 rounded-full">LIS</span>
+            </div>
+            <p class="text-xs text-slate-300 tracking-wide font-medium">Oil & Gas Development Company Limited</p>
+          </div>
+        </div>
+
+        <!-- Main Title & Hierarchy -->
+        <div class="space-y-4 max-w-md">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-medium text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-ogdcl-teal animate-pulse"></span>
+            Internal Enterprise Portal (Mock)
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            OGDCL Legal Information System
+          </h1>
+          <p class="text-lg font-medium text-emerald-400">
+            Law &amp; Legal Services Directorate
+          </p>
+          <p class="text-sm text-slate-300 leading-relaxed font-normal pt-1">
+            Centralized docket management, court litigation proceedings, counsel directory, and statutory deadline tracking for executive legal officers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Center Feature Badges (Subtle enterprise highlights) -->
+      <div class="relative z-10 my-10 space-y-3.5 max-w-md">
+        <div class="flex items-center gap-3.5 p-3 rounded-lg bg-ogdcl-navyLight/60 border border-ogdcl-navyBorder/80">
+          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+          <div class="text-xs">
+            <p class="font-semibold text-slate-100">Judicial Hierarchy Tracking</p>
+            <p class="text-slate-400">Supreme Court, High Courts, Civil Benches & Tribunals</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5 p-3 rounded-lg bg-ogdcl-navyLight/60 border border-ogdcl-navyBorder/80">
+          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <div class="text-xs">
+            <p class="font-semibold text-slate-100">Contingent Financial Mirror</p>
+            <p class="text-slate-400">Corporate exposure, statutory levies & recovery records</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Policy & Building Line -->
+      <div class="relative z-10 pt-6 border-t border-slate-700/60">
+        <div class="flex items-center gap-2.5 text-xs text-slate-400 mb-2">
+          <i class="fa-solid fa-shield-halved text-ogdcl-teal text-sm"></i>
+          <span class="font-medium text-slate-300">Authorized Legal Directorate access only</span>
+        </div>
+        <div class="flex items-center justify-between text-[11px] text-slate-500">
+          <span>OGDCL House, Jinnah Avenue, Blue Area, Islamabad</span>
+          <span>v3.4.2 Enterprise Mock</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL: Form Side (Clean White / Light Surface) -->
+    <div class="lg:w-7/12 xl:w-7/12 bg-white flex flex-col justify-between p-6 sm:p-12 lg:p-16 min-h-screen">
+      
+      <!-- Top Utility Nav -->
+      <div class="flex justify-between items-center w-full max-w-lg mx-auto">
+        <div class="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+          <i class="fa-solid fa-location-dot text-ogdcl-teal"></i>
+          <span>Islamabad (PKT) &bull; Legal Services Portal</span>
+        </div>
+        <div class="text-xs px-2.5 py-1 rounded bg-slate-100 text-slate-600 font-medium border border-slate-200">
+          Wireframe Mode
+        </div>
+      </div>
+
+      <!-- Main Login Container (Max ~420px) -->
+      <div class="w-full max-w-[420px] mx-auto py-8">
+        
+        <!-- Header -->
+        <div class="mb-8">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2">Sign In</h2>
+          <p class="text-sm text-slate-500 font-normal">
+            Enter your Legal Directorate credentials to access dockets and court schedules.
+          </p>
+        </div>
+
+        <!-- Login Form -->
+        <form onsubmit="event.preventDefault(); document.getElementById('loginStatusChip').classList.remove('hidden');" class="space-y-5">
+          
+          <!-- Employee ID / Username -->
+          <div>
+            <label for="username" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+              Employee ID / Username <span class="text-rose-500">*</span>
+            </label>
+            <div class="relative rounded-lg shadow-sm">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <i class="fa-regular fa-user text-sm"></i>
+              </div>
+              <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                value="OG-LEG-0492"
+                placeholder="e.g., OG-LEG-1048 or t.mehmood" 
+                class="block w-full pl-10 pr-4 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Password Field with Show/Hide Toggle -->
+          <div>
+            <label for="password" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+              Password <span class="text-rose-500">*</span>
+            </label>
+            <div class="relative rounded-lg shadow-sm">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <i class="fa-solid fa-lock text-sm"></i>
+              </div>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                value="MockPassword2026!"
+                placeholder="Enter your confidential password" 
+                class="block w-full pl-10 pr-11 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
+                required
+              />
+              <button 
+                type="button" 
+                onclick="const p = document.getElementById('password'); const icon = document.getElementById('toggleIcon'); if(p.type==='password'){p.type='text'; icon.classList.replace('fa-eye','fa-eye-slash');}else{p.type='password'; icon.classList.replace('fa-eye-slash','fa-eye');}"
+                class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none"
+                aria-label="Toggle password visibility"
+              >
+                <i id="toggleIcon" class="fa-regular fa-eye text-sm"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Remember Me & Forgot Password Row -->
+          <div class="flex items-center justify-between pt-1">
+            <label class="flex items-center gap-2 cursor-pointer group select-none">
+              <input 
+                type="checkbox" 
+                name="remember" 
+                id="remember"
+                checked
+                class="w-4 h-4 rounded text-ogdcl-teal focus:ring-ogdcl-teal border-slate-300 accent-ogdcl-teal transition"
+              />
+              <span class="text-xs text-slate-600 group-hover:text-slate-900 font-medium">Remember this device</span>
+            </label>
+            <a href="javascript:void(0)" class="text-xs font-semibold text-ogdcl-teal hover:text-ogdcl-tealHover underline-offset-2 hover:underline">
+              Forgot password?
+            </a>
+          </div>
+
+          <!-- Sign In Button (Primary Teal, Full-Width) -->
+          <button 
+            type="submit" 
+            class="w-full mt-2 py-2.5 px-4 bg-ogdcl-teal hover:bg-ogdcl-tealHover active:bg-[#288c68] text-white text-sm font-semibold rounded-lg shadow-sm hover:shadow transition flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ogdcl-teal"
+          >
+            <span>Sign In</span>
+            <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
+          </button>
+
+          <!-- Status Chip (Mock, visible after mock click or demonstration) -->
+          <div id="loginStatusChip" class="hidden flex items-center justify-center gap-2 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium animate-fade-in">
+            <i class="fa-solid fa-circle-notch fa-spin text-ogdcl-teal"></i>
+            <span>Signing in… (mock)</span>
+          </div>
+
+        </form>
+
+        <!-- Divider & Notice -->
+        <div class="mt-8 pt-6 border-t border-slate-200">
+          <div class="rounded-lg bg-slate-50 p-3.5 border border-slate-200 flex items-start gap-3">
+            <i class="fa-solid fa-circle-exclamation text-amber-500 text-sm mt-0.5 shrink-0"></i>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <strong class="font-semibold text-slate-800">Access Notice:</strong> Access is restricted to authorized users only. All activity is logged for audit purposes (Mock).
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Link -->
+        <div class="mt-6 text-center">
+          <p class="text-xs text-slate-500">
+            Trouble signing in? 
+            <a href="javascript:void(0)" class="font-semibold text-ogdcl-teal hover:text-ogdcl-tealHover underline-offset-2 hover:underline">
+              Contact LIS Administrator
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Global Corporate Copyright -->
+      <div class="w-full max-w-lg mx-auto pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2">
+        <span>&copy; 2025 Oil & Gas Development Company Limited</span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-lock text-[10px] text-slate-400"></i>
+          Confidential &bull; Legal Information System
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

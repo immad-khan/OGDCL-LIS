@@ -1,0 +1,782 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","primary-fixed-dim":"#65dbae","surface-container-high":"#dce9ff","surface-bright":"#f8f9ff","primary-container":"#36b388","on-surface":"#0b1c30","secondary-container":"#8bc3ff","on-error":"#ffffff","inverse-on-surface":"#eaf1ff","outline-variant":"#bccac1","on-tertiary-fixed":"#041d31","on-error-container":"#93000a","on-surface-variant":"#3d4a43","surface-container-low":"#eff4ff","on-secondary":"#ffffff","surface-dim":"#cbdbf5","inverse-primary":"#65dbae","error":"#ba1a1a","error-container":"#ffdad6","tertiary-container":"#8ca2ba","on-tertiary-fixed-variant":"#33495e","surface-tint":"#006c4e","outline":"#6d7a73","on-primary":"#ffffff","secondary-fixed":"#d0e4ff","surface-container-highest":"#d3e4fe","on-secondary-container":"#005084","on-tertiary":"#ffffff","on-secondary-fixed":"#001d35","on-primary-container":"#003f2c","secondary":"#216298","surface":"#f8f9ff","surface-variant":"#d3e4fe","secondary-fixed-dim":"#9ccaff","inverse-surface":"#213145","tertiary-fixed":"#cee5ff","tertiary":"#4b6077","background":"#f8f9ff","primary":"#006c4e","on-primary-fixed-variant":"#00513a","on-primary-fixed":"#002115","on-tertiary-container":"#22384d","on-secondary-fixed-variant":"#00497a","primary-fixed":"#82f8c9","surface-container-lowest":"#ffffff","tertiary-fixed-dim":"#b2c9e3","on-background":"#0b1c30"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin":"1.75rem","gutter-mobile":"0.75rem","space-xl":"2.25rem","margin-mobile":"1rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"caption":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Inter"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_4px_20px_rgba(11,28,48,0.15)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-md bg-inverse-surface"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">gavel</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary-fixed tracking-wider">OGDCL</span><span class="font-label-sm text-[10px] text-surface-container-high tracking-widest uppercase">Legal Information System</span></div></div></div><div class="px-space-md py-space-sm bg-inverse-surface"><div class="p-space-sm rounded-lg bg-surface-container-highest/10 flex items-center gap-space-sm"><div class="relative flex-shrink-0"><div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center font-bold">TM</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-fixed ring-2 ring-inverse-surface"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-inverse-on-surface truncate">Tariq Mehmood, ASC</span><span class="font-caption text-[11px] text-tertiary-fixed-dim truncate">CLO / GM Legal</span></div></div></div><nav class="flex-1 px-space-sm py-space-xs space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-sm"><div class="space-y-1"><div class="flex items-center justify-between px-space-sm py-2 rounded-lg font-label-md text-label-md text-surface-container-highest"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span class="font-semibold">Admin</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">expand_more</span></div><div class="pl-6 pr-space-xs space-y-1"><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-surface-container-highest hover:bg-surface-container-highest/15 hover:text-surface-bright transition-colors" data-path="add-new-user-modal" href="#" onclick="toggleUserModal(true); return false;"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span><span class="">Add New User Modal</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-bold shadow-sm transition-colors" data-path="manage-user-modal" href="#"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span><span class="">Manage User Modal</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-surface-container-highest hover:bg-surface-container-highest/15 hover:text-surface-bright transition-colors" data-path="activity-upload-audit" href="#"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span><span class="">Activity &amp; Upload Audit</span></div></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-surface-container-highest hover:bg-surface-container-highest/15 hover:text-surface-bright transition-colors" data-path="system-configuration" href="#"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span><span class="">System Config</span></div></a></div></div></nav></div><div class="p-space-md bg-inverse-surface/90 flex flex-col gap-1"><a class="flex items-center gap-space-sm text-surface-container-high hover:text-surface-bright font-label-sm text-label-sm transition-colors" data-path="support" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span class="">Legal Directorate Support</span></a><div class="font-caption text-[11px] text-tertiary-fixed-dim tracking-wide mt-1">v3.4.2 Enterprise • Secure LIS</div></div></aside><div class="pl-[260px] min-h-screen flex flex-col"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(11,28,48,0.06)] z-40 flex items-center justify-between px-space-lg"><div class="flex flex-col justify-center"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-primary transition-colors cursor-pointer">Home</span><span class="">/</span><span class="hover:text-primary transition-colors cursor-pointer">Admin</span><span class="">/</span><span class="text-on-surface font-semibold">User Accounts</span></div><div class="flex items-center gap-space-xs font-caption text-[11px] text-tertiary mt-0.5"><span class="material-symbols-outlined text-[13px] text-primary">schedule</span><span class="">Islamabad (PKT) | Monday, 06 Sep 2026</span></div></div><div class="flex items-center gap-space-md"><div class="relative w-80"><span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span><input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] transition-all" placeholder="Search case number, title, court, counsel, CNIC..." type="text"></div><button class="h-9 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg flex items-center gap-1.5 shadow-[0_1px_3px_rgba(11,28,48,0.1)] transition-colors"><span class="material-symbols-outlined text-[18px]">add</span><span class="">New Case Diary</span></button><div class="flex items-center gap-1"><button class="relative w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-error text-on-error font-label-sm text-[10px] flex items-center justify-center">4</span></button><button class="relative w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">mail</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center">2</span></button><button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Admin State Controller (Client-side simulation) -->
+<script>
+    function toggleUserModal(show) {
+      const modal = document.getElementById('new-user-modal');
+      if (modal) {
+        if (show) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        } else {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+    }
+
+    function toggleRowStatus(button) {
+      const row = button.closest('tr');
+      const badge = row.querySelector('.status-indicator');
+      const text = badge.querySelector('.status-text');
+      const dot = badge.querySelector('.status-dot');
+      
+      if (text.innerText.trim() === 'Active') {
+        text.innerText = 'Suspended';
+        badge.className = 'status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm';
+        dot.className = 'status-dot w-1.5 h-1.5 rounded-full bg-outline';
+        button.title = "Enable Account";
+        button.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">toggle_on</span>';
+      } else {
+        text.innerText = 'Active';
+        badge.className = 'status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm';
+        dot.className = 'status-dot w-1.5 h-1.5 rounded-full bg-primary';
+        button.title = "Suspend Account";
+        button.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary hover:text-error">toggle_off</span>';
+      }
+    }
+
+    function resetUserPassword(empId, name) {
+      const toast = document.getElementById('action-toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.innerText = `Internal reset token generated for ${name} (${empId}). Deliver via secure internal memo.`;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4500);
+    }
+  </script>
+<!-- Notification Toast for Simulated Local Actions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="action-toast">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm max-w-md">
+<span class="material-symbols-outlined text-primary-fixed text-[22px]">vpn_key_alert</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-fixed">Local Vault Action Executed</span>
+<span class="font-body-sm text-body-sm text-surface-container-highest" id="toast-message">Local credential reset.</span>
+</div>
+</div>
+</div>
+<div class="px-space-xl py-space-lg space-y-space-xl">
+<!-- Top Bar Title & Global Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">User Accounts</h1>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Local Credential Vault • Isolated Deployment (Mock)
+          </span>
+</div>
+<p class="font-body-md text-body-md text-tertiary max-w-3xl">
+          Manage local LIS operator credentials, roles, and administrative account permissions within the isolated intranet deployment.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center flex-shrink-0">
+<button class="h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg flex items-center gap-2 shadow-sm transition-all active:scale-[0.98]" onclick="toggleUserModal(true)">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="">+ Add New User</span>
+</button>
+</div>
+</div>
+<!-- 4 KPI Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Total Registered Users</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">42</span>
+<span class="font-caption text-caption text-tertiary">100% On-Premise</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-tertiary">
+          Across all operational regions
+        </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Active Users</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">38</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">90.5%</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-tertiary">
+          Operational login enabled
+        </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Suspended / Inactive</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-error">4</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Review Needed</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-tertiary">
+          Access restricted / On leave
+        </div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Administrators</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-secondary">6</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Privileged</span>
+</div>
+<div class="mt-space-xs font-body-sm text-body-sm text-tertiary">
+          Full configuration privileges
+        </div>
+</div>
+</div>
+<!-- Filter Bar Module -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search Input -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-tertiary">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-tertiary focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] transition-all" placeholder="Search by Name, Employee ID, or Email..." type="text">
+</div>
+<!-- Role Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] cursor-pointer">
+<option value="">Role: All</option>
+<option value="Admin">Admin</option>
+<option value="Legal User">Legal User</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] cursor-pointer">
+<option value="">Status: All</option>
+<option value="Active">Active</option>
+<option value="Suspended">Suspended</option>
+</select>
+</div>
+<!-- Region Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] cursor-pointer">
+<option value="">Region: All</option>
+<option value="Islamabad">Head Office — Islamabad</option>
+<option value="Karachi">Karachi South</option>
+<option value="Lahore">Lahore North</option>
+<option value="Quetta">Quetta</option>
+<option value="Peshawar">Peshawar</option>
+</select>
+</div>
+<!-- Actions -->
+<div class="md:col-span-2 flex items-center gap-space-xs justify-end">
+<button class="h-10 px-4 bg-primary text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors w-full sm:w-auto">
+<span class="material-symbols-outlined text-[16px]">filter_alt</span>
+<span class="">Apply</span>
+</button>
+<button class="h-10 px-3 text-tertiary hover:text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-low transition-colors">
+            Clear
+          </button>
+</div>
+</div>
+</div>
+<!-- Main Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header & Utility Belt -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Registered LIS Accounts</h2>
+<span class="font-caption text-caption text-tertiary">(Showing 8 of 42 accounts)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-secondary hover:text-on-secondary-container transition-colors py-1 px-2 rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span class="">Export Roster (CSV)</span>
+</button>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary hover:text-on-surface transition-colors py-1 px-2 rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span class="">Print Directory</span>
+</button>
+</div>
+</div>
+<!-- Table Scroll Wrapper -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface divide-y-0">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-tertiary uppercase tracking-wider">
+<th class="py-3 px-space-md font-semibold" scope="col">Name &amp; Designation</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Employee ID</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Role</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Department</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Region</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Email</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Status</th>
+<th class="py-3 px-space-sm font-semibold" scope="col">Last Login (Mock)</th>
+<th class="py-3 px-space-md text-right font-semibold" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    MK
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Mansoor Ahmed Khan</span>
+<span class="font-caption text-caption text-tertiary truncate">Senior Legal Executive</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0518</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Law Directorate</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Head Office — Islamabad</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">mansoor.khan@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">Today, 09:12 AM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0518', 'Mansoor Ahmed Khan')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold flex-shrink-0">
+                    TM
+                  </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface truncate">Tariq Mehmood, ASC</span>
+<span class="material-symbols-outlined text-[14px] text-primary" title="Current Active Session">verified</span>
+</div>
+<span class="font-caption text-caption text-tertiary truncate">CLO / General Manager Legal</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0102</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">
+                  Admin
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Law Directorate</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Head Office — Islamabad</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">tariq.mehmood@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">Today, 08:45 AM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0102', 'Tariq Mehmood, ASC')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline-variant cursor-not-allowed" disabled="" title="Active Root Admin Protected">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    HM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Hassan Meerza</span>
+<span class="font-caption text-caption text-tertiary truncate">Lead Litigation Counsel</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0244</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Legal Operations</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Karachi South</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">hassan.meerza@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">Yesterday, 04:30 PM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0244', 'Hassan Meerza')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    AL
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Arif Latif</span>
+<span class="font-caption text-caption text-tertiary truncate">Executive Officer (Tribunals)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0389</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Law Directorate</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Lahore North</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">arif.latif@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">Yesterday, 02:15 PM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0389', 'Arif Latif')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    UA
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Usman Arif</span>
+<span class="font-caption text-caption text-tertiary truncate">Manager (Arbitration &amp; JV)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0198</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Concessions &amp; JV</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Head Office — Islamabad</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">usman.arif@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">05-Sep-2026, 03:50 PM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0198', 'Usman Arif')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    IF
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Iftikhar Fatima</span>
+<span class="font-caption text-caption text-tertiary truncate">Legal Compliance Officer</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0621</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Concessions</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Quetta</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">iftikhar.fatima@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="status-text">Suspended</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">28-Aug-2026, 10:14 AM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0621', 'Iftikhar Fatima')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-outline hover:text-primary transition-colors" onclick="toggleRowStatus(this)" title="Enable Account">
+<span class="material-symbols-outlined text-[18px]">toggle_off</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    FC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Farooq Azam Chaudhry</span>
+<span class="font-caption text-caption text-tertiary truncate">System Administrator (MIS)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-MIS-0081</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">
+                  Admin
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Legal Operations / MIS</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Head Office — Islamabad</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">farooq.azam@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">Today, 07:30 AM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-MIS-0081', 'Farooq Azam Chaudhry')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md text-label-md font-bold flex-shrink-0">
+                    BJ
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Bushra Jamil</span>
+<span class="font-caption text-caption text-tertiary truncate">Legal Associate</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm font-label-sm text-label-sm text-tertiary font-mono">OG-LEG-0734</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-semibold">
+                  Legal User
+                </span>
+</td>
+<td class="py-3 px-space-sm text-on-surface-variant">Law Directorate</td>
+<td class="py-3 px-space-sm text-on-surface-variant whitespace-nowrap">Peshawar</td>
+<td class="py-3 px-space-sm text-tertiary font-mono text-[12px]">bushra.jamil@ogdcl.com</td>
+<td class="py-3 px-space-sm">
+<span class="status-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-medium">
+<span class="status-dot w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="status-text">Active</span>
+</span>
+</td>
+<td class="py-3 px-space-sm text-tertiary whitespace-nowrap font-mono text-[12px]">04-Sep-2026, 05:22 PM</td>
+<td class="py-3 px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface transition-colors" title="Edit User">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-secondary transition-colors" onclick="resetUserPassword('OG-LEG-0734', 'Bushra Jamil')" title="Reset Password Token">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-primary transition-colors" onclick="toggleRowStatus(this)" title="Toggle Enable/Disable">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Bar -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-tertiary">
+          Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">8</span> of <span class="font-semibold text-on-surface">42</span> entries
+        </span>
+<div class="inline-flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-tertiary hover:text-on-surface font-label-sm text-label-sm disabled:opacity-50 transition-colors" disabled="">
+            Prev
+          </button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+            1
+          </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+            2
+          </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">
+            3
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors">
+            Next
+          </button>
+</div>
+</div>
+</div>
+<!-- Recent Access Activity (Mock) Section -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">history</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Access Activity (Mock)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary">
+            Local system authentication and privilege transition journal recorded on internal server.
+          </p>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary bg-surface-container-low px-2.5 py-1 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Audit Logging: Active
+        </span>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-tertiary uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold">Timestamp</th>
+<th class="py-2.5 px-space-sm font-semibold">User Account</th>
+<th class="py-2.5 px-space-sm font-semibold">Action Performed</th>
+<th class="py-2.5 px-space-sm font-semibold">Local IP Address</th>
+<th class="py-2.5 px-space-md font-semibold text-right">Outcome Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">08-Sep-2026 09:12:14</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Mansoor Ahmed Khan <span class="text-tertiary font-mono font-normal">(OG-LEG-0518)</span></td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Login</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.7.42</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Success</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">08-Sep-2026 08:45:02</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Tariq Mehmood, ASC <span class="text-tertiary font-mono font-normal">(OG-LEG-0102)</span></td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Login</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.7.15</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Success</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">08-Sep-2026 08:30:19</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Iftikhar Fatima <span class="text-tertiary font-mono font-normal">(OG-LEG-0621)</span></td>
+<td class="py-2.5 px-space-sm text-error font-medium">Failed Login (Account Locked)</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.9.88</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Denied</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">07-Sep-2026 16:44:55</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Farooq Azam Chaudhry <span class="text-tertiary font-mono font-normal">(OG-MIS-0081)</span></td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Password Reset Issued</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.7.11</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Executed</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">07-Sep-2026 16:30:10</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Hassan Meerza <span class="text-tertiary font-mono font-normal">(OG-LEG-0244)</span></td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Logout</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.8.20</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Success</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/40 transition-colors bg-surface-container-low/20">
+<td class="py-2.5 px-space-md font-mono text-[12px] text-tertiary">07-Sep-2026 14:15:33</td>
+<td class="py-2.5 px-space-sm font-medium text-on-surface">Bushra Jamil <span class="text-tertiary font-mono font-normal">(OG-LEG-0734)</span></td>
+<td class="py-2.5 px-space-sm text-on-surface-variant">Account Enabled</td>
+<td class="py-2.5 px-space-sm font-mono text-[12px] text-tertiary">10.7.10.45</td>
+<td class="py-2.5 px-space-md text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Executed</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Isolation & Compliance Callout Box -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-on-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Isolated Intranet Security Architecture</h4>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+          All user accounts are created and managed by the LIS Administrator within the isolated environment. No external directory (SSO/AD/LDAP) is used. Passwords and access permissions reside strictly within OGDCL's on-premises Legal Information System database vault.
+        </p>
+</div>
+</div>
+</div>
+<!-- Modal: Add New User (Wireframe / Mock State) -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4" id="new-user-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl max-w-xl w-full p-space-lg space-y-space-md transform transition-all animate-in fade-in">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Add New LIS User</h3>
+<p class="font-caption text-caption text-tertiary">Create local credentials within intranet vault</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-tertiary hover:text-on-surface" onclick="toggleUserModal(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Full Name</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)]" placeholder="e.g. Zahid Iqbal, Advocate" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Employee ID (OGDCL)</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] font-mono" placeholder="e.g. OG-LEG-0892" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Official Email Address</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] font-mono" placeholder="name@ogdcl.com" type="email">
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Designation</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)]" placeholder="e.g. Senior Legal Counsel" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Assigned Role</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)]">
+<option value="Legal User">Legal User (Standard Operations)</option>
+<option value="Admin">Admin (Full System Privilege)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-tertiary">Operational Region</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)]">
+<option>Head Office — Islamabad</option>
+<option>Karachi South</option>
+<option>Lahore North</option>
+<option>Quetta</option>
+<option>Peshawar</option>
+</select>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">vpn_key</span>
+<span class="font-label-sm text-label-sm font-semibold">Initial Access Token Generation</span>
+</div>
+<p class="font-caption text-caption text-tertiary">
+          A temporary 16-character intranet passphrase will be generated locally. Deliver it in-person or via internal dispatch memo.
+        </p>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-lg text-tertiary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md transition-colors" onclick="toggleUserModal(false)">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-colors" onclick="toggleUserModal(false); resetUserPassword('NEW-USER', 'New User');">
+          Create Local User
+        </button>
+</div>
+</div>
+</div><div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4 overflow-y-auto" id="manage-user-modal"><div class="max-w-2xl w-full bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden my-8"><div class="p-space-lg space-y-space-md max-h-[90vh] overflow-y-auto"><div class="flex items-start justify-between pb-space-xs"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">manage_accounts</span></div><div><h3 class="font-headline-md text-headline-md text-on-surface">Manage User</h3><p class="font-caption text-caption text-tertiary">Edit account, role, and access for this user</p></div></div><button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" onclick="document.getElementById('manage-user-modal').remove()"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-sm text-headline-sm font-bold flex-shrink-0">MK</div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm text-on-surface">Mansoor Ahmed Khan</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">Senior Legal Executive</span></div><span class="font-caption text-caption text-tertiary">Created: 12-Jan-2026 (Mock) • On-Premises Vault</span></div></div><div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container text-tertiary font-label-sm text-[11px]"><span class="material-symbols-outlined text-[14px] text-primary">lock</span><span class="">Read-only Profile</span></div></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs font-body-sm"><div class="flex flex-col"><span class="font-label-sm text-[11px] text-tertiary uppercase tracking-wider">Employee ID</span><span class="font-mono font-semibold text-on-surface text-[13px]">OG-LEG-0518</span></div><div class="flex flex-col"><span class="font-label-sm text-[11px] text-tertiary uppercase tracking-wider">Department</span><span class="text-on-surface text-[13px]">Law Directorate</span></div><div class="flex flex-col"><span class="font-label-sm text-[11px] text-tertiary uppercase tracking-wider">Region</span><span class="text-on-surface text-[13px]">Head Office — Islamabad</span></div><div class="flex flex-col"><span class="font-label-sm text-[11px] text-tertiary uppercase tracking-wider">Official Email</span><span class="font-mono text-tertiary text-[12px] truncate">mansoor.khan@ogdcl.com</span></div></div></div><div class="space-y-space-sm pt-space-xs"><div class="flex items-center justify-between pb-1"><h4 class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-secondary">shield_person</span>Role &amp; Access Permissions</h4><span class="font-caption text-[11px] text-tertiary">Section A</span></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md"><div class="space-y-1"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Assigned Role</label><select class="w-full h-10 px-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)]"><option value="Admin">Admin</option><option selected="" value="Legal User">Legal User</option></select><p class="font-caption text-[11px] text-tertiary">Role determines module access. Admin manages system configuration; Legal User manages cases and diaries.</p></div><div class="space-y-1"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Account Status</label><div class="flex items-center gap-2 pt-1"><button class="flex-1 h-9 px-3 rounded-lg bg-primary-fixed/40 text-on-primary-fixed-variant font-label-md text-label-md flex items-center justify-center gap-1.5 font-semibold" type="button"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="">Active</span></button><button class="flex-1 h-9 px-3 rounded-lg bg-surface-container-low text-tertiary hover:bg-surface-container font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button"><span class="w-2 h-2 rounded-full bg-outline"></span><span class="">Suspended</span></button></div><div class="pt-2"><label class="flex items-center gap-2 cursor-pointer"><input class="rounded text-primary focus:ring-0" type="checkbox"><span class="font-caption text-[12px] text-on-surface-variant">Force logout on save (terminates active session immediately)</span></label></div></div></div></div><div class="space-y-space-sm pt-space-xs"><div class="flex items-center justify-between pb-1"><h4 class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-secondary">key</span>Password Reset &amp; Credentials</h4><span class="font-caption text-[11px] text-tertiary">Section B</span></div><div class="space-y-space-xs"><div class="flex flex-col sm:flex-row gap-space-md py-1"><label class="flex items-center gap-2 cursor-pointer"><input class="text-primary focus:ring-0" name="pwd-mode" type="radio"><span class="font-label-md text-label-md text-tertiary">Generate temporary password on save</span></label><label class="flex items-center gap-2 cursor-pointer"><input checked="" class="text-primary focus:ring-0" name="pwd-mode" type="radio"><span class="font-label-md text-label-md text-on-surface font-medium">Set new password manually</span></label></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-1"><div class="space-y-1"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium">New Password</label><div class="relative"><input class="w-full h-10 px-3 pr-9 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] font-mono" placeholder="••••••••••••" type="password"><span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-tertiary cursor-pointer hover:text-on-surface">visibility</span></div></div><div class="space-y-1"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Confirm New Password</label><div class="relative"><input class="w-full h-10 px-3 pr-9 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] font-mono" placeholder="••••••••••••" type="password"><span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-tertiary cursor-pointer hover:text-on-surface">visibility</span></div></div></div><div class="flex items-center justify-between pt-1"><label class="flex items-center gap-2 cursor-pointer"><input checked="" class="rounded text-primary focus:ring-0" type="checkbox"><span class="font-caption text-[12px] text-on-surface-variant">Force password change on next login</span></label></div><div class="p-space-sm rounded-lg bg-surface-container-low/60 flex items-start gap-2 mt-1"><span class="material-symbols-outlined text-[16px] text-secondary mt-0.5">info</span><p class="font-caption text-[11px] text-tertiary leading-relaxed">In this isolated deployment, new credentials must be communicated manually by the LIS Administrator. No automated emails are dispatched.</p></div></div></div><div class="space-y-space-sm pt-space-xs"><div class="flex items-center justify-between pb-1"><h4 class="font-label-lg text-label-lg text-on-surface flex items-center gap-1.5"><span class="material-symbols-outlined text-[18px] text-secondary">assignment</span>Administrative Change Log</h4><span class="font-caption text-[11px] text-tertiary">Section C</span></div><div class="space-y-1"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Reason for change (Mandatory for privilege adjustment)</label><textarea class="w-full p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(0,108,78,0.25)] leading-relaxed" rows="2">Periodic review of operational permissions; retained as Senior Legal Executive for Law Directorate cases.</textarea><p class="font-caption text-[11px] text-tertiary">All admin actions on user accounts are logged in the local audit trail (mock).</p></div></div><div class="pt-space-sm flex flex-col gap-space-xs"><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm"><button class="w-full sm:w-auto h-10 px-4 rounded-lg text-error ring-1 ring-error/40 hover:bg-error-container font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5" type="button"><span class="material-symbols-outlined text-[18px]">person_off</span><span class="">Disable Account</span></button><div class="flex items-center gap-space-sm w-full sm:w-auto justify-end"><button class="h-10 px-4 rounded-lg text-tertiary hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md transition-colors" onclick="document.getElementById('manage-user-modal').remove()" type="button">Cancel</button><button class="h-10 px-space-md bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm flex items-center justify-center gap-2 transition-colors active:scale-[0.98]" onclick="document.getElementById('manage-user-modal').remove()" type="button"><span class="material-symbols-outlined text-[18px]">save</span><span class="">Save Changes</span></button></div></div><div class="bg-primary-fixed/40 text-on-primary-fixed-variant text-caption text-[12px] px-3 py-1.5 rounded-lg font-medium flex items-center gap-2 mt-2"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="">User updated (mock) — audit entry recorded in local log.</span></div></div></div></div></div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-sm px-space-lg shadow-[0_-1px_6px_rgba(11,28,48,0.03)] flex flex-col md:flex-row items-center justify-between gap-space-xs"><div class="font-caption text-caption text-on-surface-variant">© 2025 Oil &amp; Gas Development Company Limited (OGDCL) - Legal Information System. All Rights Reserved.</div><div class="font-caption text-caption text-tertiary flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-primary">lock</span><span class="">Confidential - Law &amp; Legal Services Directorate</span></div></footer></div>
+
+
+
+</body></html>
