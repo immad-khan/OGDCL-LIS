@@ -9,27 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            ogdcl: {
-              teal: '#36b388',
-              tealHover: '#2ea179',
-              navy: '#0b192c',
-              navyDark: '#071220',
-              navyLight: '#11223b',
-              navyBorder: '#1c3456',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: ":{"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"caption":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Inter"]}, fontSize: ":{"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"caption":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}]}, colors: { ogdcl: { teal: '#36b388', tealHover: '#2ea179', navy: '#0b192c', navyDark: '#071220', navyLight: '#11223b', navyBorder: '#1c3456' } } } } }</script>
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -63,30 +43,30 @@
         <a href="login_screen.html" class="flex items-center gap-3.5 mb-10 block hover:opacity-90 transition-opacity" title="Back to User Login">
           <!-- OGDCL Styled Logo Icon -->
           <div class="w-12 h-12 rounded-xl bg-ogdcl-teal/20 border border-ogdcl-teal/30 flex items-center justify-center text-ogdcl-teal shadow-inner">
-            <i class="fa-solid fa-scale-balanced text-2xl"></i>
+            <i class="fa-solid fa-scale-balanced text-headline-lg"></i>
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-xl font-extrabold tracking-wider text-white">OGDCL</span>
-              <span class="text-[10px] px-2 py-0.5 font-bold tracking-widest uppercase bg-ogdcl-teal/20 text-emerald-300 border border-ogdcl-teal/40 rounded-full">LIS</span>
+              <span class="text-headline-md font-extrabold tracking-wider text-white">OGDCL</span>
+              <span class="text-caption px-2 py-0.5 font-bold tracking-widest uppercase bg-ogdcl-teal/20 text-emerald-300 border border-ogdcl-teal/40 rounded-full">LIS</span>
             </div>
-            <p class="text-xs text-slate-300 tracking-wide font-medium">Oil & Gas Development Company Limited</p>
+            <p class="text-caption text-slate-300 tracking-wide font-medium">Oil & Gas Development Company Limited</p>
           </div>
         </a>
 
         <!-- Main Title & Hierarchy -->
         <div class="space-y-4 max-w-md">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-medium text-emerald-400">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-caption font-medium text-emerald-400">
             <span class="w-2 h-2 rounded-full bg-ogdcl-teal animate-pulse"></span>
             Internal Enterprise Portal (Mock)
           </div>
-          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 class="text-headline-xl font-extrabold tracking-tight text-white leading-tight">
             OGDCL Legal Information System
           </h1>
-          <p class="text-lg font-medium text-emerald-400">
+          <p class="text-body-lg font-medium text-emerald-400">
             Law &amp; Legal Services Directorate
           </p>
-          <p class="text-sm text-slate-300 leading-relaxed font-normal pt-1">
+          <p class="text-body-md text-slate-300 leading-relaxed font-normal pt-1">
             Centralized docket management, court litigation proceedings, counsel directory, and statutory deadline tracking for executive legal officers.
           </p>
         </div>
@@ -95,20 +75,20 @@
       <!-- Center Feature Badges (Subtle enterprise highlights) -->
       <div class="relative z-10 my-10 space-y-3.5 max-w-md">
         <div class="flex items-center gap-3.5 p-3 rounded-lg bg-ogdcl-navyLight/60 border border-ogdcl-navyBorder/80">
-          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-sm shrink-0">
+          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-body-md shrink-0">
             <i class="fa-solid fa-landmark"></i>
           </div>
-          <div class="text-xs">
+          <div class="text-caption">
             <p class="font-semibold text-slate-100">Judicial Hierarchy Tracking</p>
             <p class="text-slate-400">Supreme Court, High Courts, Civil Benches & Tribunals</p>
           </div>
         </div>
 
         <div class="flex items-center gap-3.5 p-3 rounded-lg bg-ogdcl-navyLight/60 border border-ogdcl-navyBorder/80">
-          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-sm shrink-0">
+          <div class="w-8 h-8 rounded-lg bg-ogdcl-teal/15 text-ogdcl-teal flex items-center justify-center text-body-md shrink-0">
             <i class="fa-solid fa-coins"></i>
           </div>
-          <div class="text-xs">
+          <div class="text-caption">
             <p class="font-semibold text-slate-100">Contingent Financial Mirror</p>
             <p class="text-slate-400">Corporate exposure, statutory levies & recovery records</p>
           </div>
@@ -117,11 +97,11 @@
 
       <!-- Bottom Policy & Building Line -->
       <div class="relative z-10 pt-6 border-t border-slate-700/60">
-        <div class="flex items-center gap-2.5 text-xs text-slate-400 mb-2">
-          <i class="fa-solid fa-shield-halved text-ogdcl-teal text-sm"></i>
+        <div class="flex items-center gap-2.5 text-caption text-slate-400 mb-2">
+          <i class="fa-solid fa-shield-halved text-ogdcl-teal text-body-md"></i>
           <span class="font-medium text-slate-300">Authorized Legal Directorate access only</span>
         </div>
-        <div class="flex items-center justify-between text-[11px] text-slate-500">
+        <div class="flex items-center justify-between text-caption text-slate-500">
           <span>OGDCL House, Jinnah Avenue, Blue Area, Islamabad</span>
           <span>v3.4.2 Enterprise Mock</span>
         </div>
@@ -134,11 +114,11 @@
       
       <!-- Top Utility Nav -->
       <div class="flex justify-between items-center w-full max-w-lg mx-auto">
-        <div class="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+        <div class="text-caption text-slate-400 font-medium flex items-center gap-1.5">
           <i class="fa-solid fa-location-dot text-ogdcl-teal"></i>
           <span>Islamabad (PKT) &bull; Legal Services Portal</span>
         </div>
-        <div class="text-xs px-2.5 py-1 rounded bg-slate-100 text-slate-600 font-medium border border-slate-200">
+        <div class="text-caption px-2.5 py-1 rounded bg-slate-100 text-slate-600 font-medium border border-slate-200">
           Wireframe Mode
         </div>
       </div>
@@ -148,8 +128,8 @@
         
         <!-- Header -->
         <div class="mb-8">
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-2">Admin Login</h2>
-          <p class="text-sm text-slate-500 font-normal">
+          <h2 class="text-headline-lg sm:text-headline-xl font-bold tracking-tight text-slate-900 mb-2">Admin Login</h2>
+          <p class="text-body-md text-slate-500 font-normal">
             Enter your Legal Directorate credentials to access dockets and court schedules.
           </p>
         </div>
@@ -159,12 +139,12 @@
           
           <!-- Employee ID / Username -->
           <div>
-            <label for="username" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+            <label for="username" class="block text-caption font-semibold text-slate-700 uppercase tracking-wider mb-2">
               Employee ID / Username <span class="text-rose-500">*</span>
             </label>
             <div class="relative rounded-lg shadow-sm">
               <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                <i class="fa-regular fa-user text-sm"></i>
+                <i class="fa-regular fa-user text-body-md"></i>
               </div>
               <input 
                 type="text" 
@@ -172,7 +152,7 @@
                 name="username" 
                 value="ADMIN-001"
                 placeholder="e.g., OG-LEG-1048 or t.mehmood" 
-                class="block w-full pl-10 pr-4 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
+                class="block w-full pl-10 pr-4 py-2.5 text-body-md font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
                 required
               />
             </div>
@@ -180,12 +160,12 @@
 
           <!-- Password Field with Show/Hide Toggle -->
           <div>
-            <label for="password" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
+            <label for="password" class="block text-caption font-semibold text-slate-700 uppercase tracking-wider mb-2">
               Password <span class="text-rose-500">*</span>
             </label>
             <div class="relative rounded-lg shadow-sm">
               <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                <i class="fa-solid fa-lock text-sm"></i>
+                <i class="fa-solid fa-lock text-body-md"></i>
               </div>
               <input 
                 type="password" 
@@ -193,7 +173,7 @@
                 name="password" 
                 value="AdminSecret2026!"
                 placeholder="Enter your confidential password" 
-                class="block w-full pl-10 pr-11 py-2.5 text-sm font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
+                class="block w-full pl-10 pr-11 py-2.5 text-body-md font-medium text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ogdcl-teal focus:border-ogdcl-teal transition placeholder:text-slate-400 placeholder:font-normal"
                 required
               />
               <button 
@@ -202,7 +182,7 @@
                 class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none"
                 aria-label="Toggle password visibility"
               >
-                <i id="toggleIcon" class="fa-regular fa-eye text-sm"></i>
+                <i id="toggleIcon" class="fa-regular fa-eye text-body-md"></i>
               </button>
             </div>
           </div>
@@ -217,9 +197,9 @@
                 checked
                 class="w-4 h-4 rounded text-ogdcl-teal focus:ring-ogdcl-teal border-slate-300 accent-ogdcl-teal transition"
               />
-              <span class="text-xs text-slate-600 group-hover:text-slate-900 font-medium">Remember this device</span>
+              <span class="text-caption text-slate-600 group-hover:text-slate-900 font-medium">Remember this device</span>
             </label>
-            <a href="user_accounts.html" class="text-xs font-semibold text-ogdcl-teal hover:text-ogdcl-tealHover underline-offset-2 hover:underline">
+            <a href="user_accounts.html" class="text-caption font-semibold text-ogdcl-teal hover:text-ogdcl-tealHover underline-offset-2 hover:underline">
               Forgot password?
             </a>
           </div>
@@ -227,16 +207,16 @@
           <!-- Sign In Button (Primary Teal, Full-Width) -->
           <button 
             type="submit" 
-            class="w-full mt-2 py-2.5 px-4 bg-ogdcl-teal hover:bg-ogdcl-tealHover active:bg-[#288c68] text-white text-sm font-semibold rounded-lg shadow-sm hover:shadow transition flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ogdcl-teal"
+            class="w-full mt-2 py-2.5 px-4 bg-ogdcl-teal hover:bg-ogdcl-tealHover active:bg-[#288c68] text-white text-body-md font-semibold rounded-lg shadow-sm hover:shadow transition flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ogdcl-teal"
           >
             <span>Sign In</span>
-            <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
+            <i class="fa-solid fa-arrow-right-to-bracket text-caption"></i>
           </button>
 
           <!-- Status Chip (Mock, visible after mock click or demonstration) -->
-          <div id="loginStatusChip" class="hidden flex items-center justify-center gap-2 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium animate-fade-in">
+          <div id="loginStatusChip" class="hidden flex items-center justify-center gap-2 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-caption font-medium animate-fade-in">
             <i class="fa-solid fa-circle-notch fa-spin text-ogdcl-teal"></i>
-            <span>Signing in… (mock)</span>
+            <span>Signing inâ€¦ (mock)</span>
           </div>
 
         </form>
@@ -244,8 +224,8 @@
         <!-- Divider & Notice -->
         <div class="mt-8 pt-6 border-t border-slate-200">
           <div class="rounded-lg bg-slate-50 p-3.5 border border-slate-200 flex items-start gap-3">
-            <i class="fa-solid fa-circle-exclamation text-amber-500 text-sm mt-0.5 shrink-0"></i>
-            <p class="text-xs text-slate-600 leading-relaxed">
+            <i class="fa-solid fa-circle-exclamation text-amber-500 text-body-md mt-0.5 shrink-0"></i>
+            <p class="text-caption text-slate-600 leading-relaxed">
               <strong class="font-semibold text-slate-800">Access Notice:</strong> Access is restricted to authorized users only. All activity is logged for audit purposes (Mock).
             </p>
           </div>
@@ -253,7 +233,7 @@
 
         <!-- Footer Link -->
         <div class="mt-6 text-center">
-          <p class="text-xs text-slate-500">
+          <p class="text-caption text-slate-500">
             Trouble signing in? 
             <a href="user_accounts.html" class="font-semibold text-ogdcl-teal hover:text-ogdcl-tealHover underline-offset-2 hover:underline">
               Contact LIS Administrator
@@ -264,10 +244,10 @@
       </div>
 
       <!-- Bottom Global Corporate Copyright -->
-      <div class="w-full max-w-lg mx-auto pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2">
+      <div class="w-full max-w-lg mx-auto pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-caption text-slate-400 gap-2">
         <span>&copy; 2025 Oil & Gas Development Company Limited</span>
         <span class="flex items-center gap-1.5">
-          <i class="fa-solid fa-lock text-[10px] text-slate-400"></i>
+          <i class="fa-solid fa-lock text-caption text-slate-400"></i>
           Confidential &bull; Legal Information System
         </span>
       </div>
